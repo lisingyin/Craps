@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="270.0" prefWidth="522.0000999999975" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s147545.WIN_LOSEController">
+  <children>
+      <ImageView fitHeight="254.0" fitWidth="522.0" layoutY="58.0" opacity="0.29">
+         <image>
+            <Image url="@66b8ec58e6e95bb23d79fed1906cb23c_upha-holiday-celebration-dec-holiday-celebration-clip-art_2400-1201.png" />
+         </image>
+      </ImageView>
+    <GridPane layoutX="18.0" layoutY="42.0" prefHeight="270.0" prefWidth="486.0001220703125">
+      <children>
+        <Label text="Number of Win :">
+          <font>
+            <Font name="FZFangSong-Z02S" size="30.0" />
+          </font>
+        </Label>
+        <Label text="Number of Lose :" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <font>
+            <Font name="FZFangSong-Z02" size="30.0" />
+          </font>
+        </Label>
+        <Label fx:id="WIN" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="87.0" prefWidth="242.0001220703125" text="" GridPane.columnIndex="1">
+          <font>
+            <Font size="30.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label fx:id="LOSE" font="$x1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+      <ImageView fitHeight="79.0" fitWidth="109.0" layoutX="207.0" layoutY="3.0" opacity="0.55">
+         <image>
+            <Image url="@Winner.png" />
+         </image>
+      </ImageView>
+  </children>
+</AnchorPane>

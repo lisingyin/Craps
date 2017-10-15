@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="376.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s147545.FXMLDocumentController">
+  <children>
+    <Label layoutX="259.0" prefHeight="43.0" prefWidth="205.0" text="The Dice Game" textAlignment="CENTER" textFill="#a14141" textOverrun="LEADING_WORD_ELLIPSIS">
+      <font>
+        <Font size="28.0" />
+      </font>
+    </Label>
+    <AnchorPane fx:id="Continue" layoutX="2.0" layoutY="157.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="284.0" prefWidth="738.0">
+      <children>
+        <ImageView cacheHint="QUALITY" fitHeight="228.0" fitWidth="738.0" layoutY="57.0">
+          <image>
+            <Image url="@table-darkergreen.png" />
+          </image>
+        </ImageView>
+        <GridPane layoutY="-83.0" prefHeight="91.0" prefWidth="191.0">
+          <children>
+            <Button fx:id="Dice_Rolling" maxHeight="17.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Dice_Roll" prefHeight="17.0" prefWidth="185.0" text="Dice-Rolling" />
+            <Button fx:id="CTB" disable="true" maxHeight="17.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#CT" prefHeight="17.0" prefWidth="185.0" text="Continue" GridPane.rowIndex="1" />
+            <Button fx:id="New_Game" disable="true" maxHeight="17.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#NewGame" prefHeight="18.0" prefWidth="185.0" text="New Game" GridPane.rowIndex="2" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <ImageView fx:id="d1" fitHeight="100.0" fitWidth="100.0" layoutX="221.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="d2" fitHeight="100.0" fitWidth="100.0" layoutX="398.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="Statistic" layoutY="14.0" mnemonicParsing="false" onAction="#Statistic" prefHeight="27.0" prefWidth="191.0" text="Statistic" />
+        <Button id="Close" fx:id="Exit" layoutX="631.0" layoutY="238.0" mnemonicParsing="false" onAction="#Exit" prefHeight="34.0" prefWidth="93.0" text="Close" />
+      </children>
+    </AnchorPane>
+    <GridPane layoutX="4.0" layoutY="41.0" prefHeight="34.0" prefWidth="185.0">
+      <children>
+        <TextField fx:id="STID" GridPane.columnIndex="1" />
+        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="92.0" text="Student ID:" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="79.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="79.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Label fx:id="Ready" layoutX="509.0" layoutY="14.0" minHeight="69.0" prefHeight="69.0" prefWidth="231.00009999999747" text="Ready?" textFill="#fc0606">
+      <font>
+        <Font size="55.0" />
+      </font>
+    </Label>
+    <GridPane layoutX="509.0" layoutY="69.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" prefWidth="232.0">
+      <children>
+        <Label fx:id="STATUS" prefHeight="72.0" prefWidth="261.0" textFill="#500ecc" textOverrun="WORD_ELLIPSIS">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+        <Label fx:id="Point" maxWidth="1.7976931348623157E308" GridPane.rowIndex="2" />
+        <TextArea fx:id="Result" editable="false" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="251.0" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+      <ImageView fitHeight="150.0" fitWidth="267.0" layoutX="228.0" layoutY="49.0">
+         <image>
+            <Image url="@BlackBoard.png" />
+         </image>
+      </ImageView>
+  <Label fx:id="countResult" alignment="CENTER" layoutX="266.0" layoutY="59.0" prefHeight="130.0" prefWidth="191.0" textAlignment="JUSTIFY" textFill="#eee5e5">
+         <font>
+            <Font name="Palatino" size="16.0" />
+         </font>
+      </Label>
+  </children>
+</AnchorPane>
